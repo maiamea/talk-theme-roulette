@@ -1,0 +1,10 @@
+body {
+  background-color: bisque;
+}
+
+button {
+  padding: 5px 20px;
+  background-color: lightgoldenrodyellow;
+  border-style: none;
+  border-radius: 30px;
+}
