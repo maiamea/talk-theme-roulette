@@ -4,16 +4,20 @@ import talkThemesData from "./talk-themes-data.json" assert {type: "json"}
 
 const startButton = document.getElementById('start-button');
 
+const resultArea = document.getElementById('result-area');
+
+
 // スタートボタンをクリックすると、トークテーマが表示される
 startButton.onclick = () => {
   console.log('ボタンが押されました。');
   
+  
   // 決定したトークテーマを表示するエリアの作成
-  const resultArea = document.getElementById('result-area');
+  resultArea.innerText = ''; // すでに表示されてる結果を削除する
   const header = document.createElement('h2');
-  header.innerHTML = 'トークテーマの発表';
   const paragraph = document.createElement('p');
-  paragraph.innerHTML =  randomTalkTheme(talkThemesData);
+  header.innerText = 'トークテーマの発表';
+  paragraph.innerText =  randomTalkTheme(talkThemesData);
   resultArea.appendChild(header);
   resultArea.appendChild(paragraph);
 }
