@@ -22,12 +22,28 @@ startButton.onclick = () => {
  */
 function makeTalkThemeArea() {
   resultArea.innerText = ''; // すでに表示されてる結果を削除する
-  const header = document.createElement('h2');
+
+  // headerDivided の作成
+  const headerDivided = document.createElement('div');
+  headerDivided.setAttribute('class', 'card-header');
+  headerDivided.innerText = 'トークテーマの発表';
+  
+  // bodyDivided の作成
+  const bodyDivided = document.createElement('div');
+  bodyDivided.setAttribute('class', 'card-body');
+  
   const paragraph = document.createElement('p');
-  header.innerText = 'トークテーマの発表';
+  paragraph.setAttribute('class', 'card-text');
   paragraph.innerText =  randomTalkTheme(talkThemesData);
-  resultArea.appendChild(header);
-  resultArea.appendChild(paragraph);
+  bodyDivided.appendChild(paragraph);
+  
+  // resultArea に Bootstrap のスタイルを適用する
+  resultArea.setAttribute('class', 'card');
+  resultArea.setAttribute('style', 'max-width: 700px');
+
+  // reaultArea に headerDivided と bodyDivided を差し込む
+  resultArea.appendChild(headerDivided);
+  resultArea.appendChild(bodyDivided);
 }
 
 
