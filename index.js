@@ -24,7 +24,7 @@ function makeTalkThemeArea() {
   // headerDivided の作成
   const headerDivided = document.createElement('div');
   headerDivided.setAttribute('class', 'card-header');
-  headerDivided.innerText = 'トークテーマの発表';
+  headerDivided.innerText = 'トークテーマの発表🎉';
   
   // bodyDivided の作成
   const bodyDivided = document.createElement('div');
