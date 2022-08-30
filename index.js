@@ -10,8 +10,6 @@ const sumTalkThemes = talkThemesData.length;
 
 // スタートボタンをクリックすると、トークテーマが表示される
 startButton.onclick = () => {
-  console.log('ボタンが押されました。');
-  
   // 決定したトークテーマを表示するエリアの作成
   makeTalkThemeArea();
 }
