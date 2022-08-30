@@ -51,9 +51,7 @@ function makeTalkThemeArea() {
  * @returns {string} ランダムに選ばれた1つのトークテーマ
  */
 function randomTalkTheme(talkThemesData) {
-  console.log({talkThemesData});
   const randomIndex =  makeRandomNumber(sumTalkThemes);
-  console.log({randomIndex});
   return talkThemesData[randomIndex];
 }
 
